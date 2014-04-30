@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"				
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd 
+	   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd ">
+	   
+
+    <context:property-placeholder location="WEB-INF/config/application.properties"/>    
+    <context:annotation-config/>       
+    
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+    <!-- <bean id="dataSource" class="com.mobipay.merchantweb.custom.EncryptedDataSource">  -->
+        <property name="driverClass" value="${connection.driver_class}"/>
+        <property name="jdbcUrl" value="${connection.url}"/>
+        <property name="user" value="${connection.username}"/>
+        <property name="password" value="${connection.password}"/>
+        <property name="idleConnectionTestPeriod" value="14400"/>
+        <property name="maxIdleTime" value="25200"/>
+        <property name="preferredTestQuery" value="SELECT 1"/>
+        <property name="testConnectionOnCheckin" value="true"/>
+        <property name="testConnectionOnCheckout" value="false"/>
+        <property name="acquireRetryDelay" value="5000"/>
+     	<property name="breakAfterAcquireFailure" value="true"/>
+    </bean>  
+        
+    <!-- session factory untuk setiap dao -->
+	 <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean"
+	  	p:dataSource-ref="dataSource" p:packagesToScan="com.mobipay.customerkycweb.model" >    
+	  
+		  <property name="hibernateProperties">
+			   <props>
+				    <prop key="hibernate.dialect"> ${connection.dialect} </prop>
+				    <prop key="hibernate.show_sql"> ${connection.show_sql} </prop>    
+			   </props>
+		  </property>
+	 </bean>
+	 
+	 <!-- Generic HibernateTemplate. not used directly, but useful for plain JSP to expose it's functionality -->
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+
+	<!-- transaction manager -->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+		p:sessionFactory-ref="sessionFactory" />
+    
+ 	<context:component-scan base-package="com.mobipay.customerkycweb.service"/>
+    <context:component-scan base-package="com.mobipay.customerkycweb.dao"/>              
+    <context:component-scan base-package="com.mobipay.customerkycweb.web"/>
+    <context:component-scan base-package="com.mobipay.customerkycweb.model"/> 
+    <context:component-scan base-package="com.mobipay.customerkycweb.util"/> 
+</beans>

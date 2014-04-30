@@ -1,0 +1,245 @@
+.hide {
+    visibility: hidden;
+    display: none;
+}
+
+.buttonArea {
+    margin-top: 20px;
+    padding-bottom: 3px;
+    padding-left: 15px;
+    padding-top: 3px;
+    background-color: #E6E6E6;
+}
+
+.buttonEnable {
+
+    background: #F70A0A;
+    border: solid 1px rgb(80, 80, 80);
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 0 0 5px;
+    cursor: pointer;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: inline-block;
+    text-decoration: none;
+    background-repeat: repeat-x;
+    position: relative;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+}
+
+.buttonDisable {
+
+    background: #cccccc;
+    border: solid 1px rgb(80, 80, 80);
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 0 0 5px;
+    cursor: pointer;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: inline-block;
+    text-decoration: none;
+    background-repeat: repeat-x;
+    position: relative;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+}
+
+.buttonEnable:hover {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.clean-red {
+    border: solid 1px #FF0F1C;
+    background: #F6CBCA;
+    color: #FC0305;
+    padding: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.error {
+    color: #FC0305;
+    font-size: 11px;
+}
+
+.mandatory{
+    color: #FC0305;
+    font-size: 9px;
+    vertical-align: top;
+}
+
+.button {
+    padding: 4px 10px 3px 25px;
+    border: solid 1px #336600;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    background-repeat: repeat-x;
+    height: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #F70A0A;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+}
+
+.button img {
+    position: absolute;
+    top: -4px;
+    left: -12px;
+    border: none;
+}
+
+.button:hover {
+    color: #ffffff;
+    font-weight: bold;
+} 
+
+.buttonPossition{
+	margin-top:10px; 
+	margin-bottom: 10px; 
+	text-align: center;	
+}
+
+.txtboxShort {
+    width: 10em;
+}
+
+.txtBoxCurrency{
+   width: 10em;
+}
+
+.txtBoxNormal {
+    width: 20em;
+}
+
+.txtBoxNormalDialog {
+    width:95%; 
+    padding: .4em; 
+}
+
+.txtBoxShortDialog {
+    width:35%; 
+    padding: .4em; 
+}
+
+.lstBoxShortDialog {
+    width:50%; 
+    padding: .4em; 
+}
+
+.txtBoxDate {
+    width: 6.5em;
+}
+
+.txtBoxPhoneNo {
+    width: 8em;
+}
+
+.txtBoxPostCode {
+    width: 3.5em;
+}
+
+.txtBoxArea {
+    width: 20em;
+}
+
+.txtBoxAreaEmailBody {
+    width: 283px; 
+    height: 382px;
+}
+
+.lstBoxShort {
+    width: 10em;
+}
+
+.lstBoxNormal {
+    width: 15em;
+}
+
+.lstBoxTime {
+    width: 4em;
+}
+
+span.pagelinks {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: -32px;
+    padding: 2px 0 2px 0;
+    text-align: right;
+    width: 100%;
+}
+
+span.pagebanner {
+    display: block;
+    margin: 10px 0 10px 0;
+    padding: 2px 4px 2px 0;
+}
+
+div.form-error {
+  background-color:#FFE5ED;
+  background-position:initial initial;
+  background-repeat:initial initial;
+  border-bottom-left-radius:4px;
+  border-bottom-right-radius:4px;
+  border-top-left-radius:4px;
+  border-top-right-radius:4px;
+  color:#8B0000;
+  line-height:180%;
+  margin-bottom:22px;
+  padding:6px 12px;
+}
+
+.alert {
+  background-color:#FCF8E3;
+  border:1px solid #FBEED5;
+  border-bottom-left-radius:4px;
+  border-bottom-right-radius:4px;
+  border-top-left-radius:4px;
+  border-top-right-radius:4px;
+  color:#C09853;
+  margin-bottom:20px;
+  padding:8px 35px 8px 14px;
+  text-shadow:rgba(255, 255, 255, 0.498039) 0 1px 0;
+} 
+
+.alert-danger, .alert-error {
+  background-color:#F2DEDE;
+  border-color:#EED3D7;
+  color:#B94A48;
+}
+
+input.error {
+    background: url("../images/icon-fail.png") no-repeat scroll right center #FFEBEF;
+    color: #480000;
+}
+
+input.valid {
+    background: url("../images/icon-ok.png") no-repeat scroll right center #E3FFE5;
+    border-color: #96B796 !important;
+    color: #002F00;
+}
+
+.mandatory{
+	color:#B94A48;
+}
+
+.updatedfield{
+	color:#FA0000;
+	font-size:13;
+	font-weight: bold;
+}
