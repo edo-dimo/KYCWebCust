@@ -1,5 +1,5 @@
 <%@ include file="/include/taglibs.jsp" %>
-<title>Layanan Pelanggan DIMO</title>
+<title>Layanan Pelanggan BBMPAY</title>
 <head>
 	<link rel="stylesheet" href="${ctxPath}/css/jquery.realperson.css">
 	<link rel="stylesheet" type="text/css" media="screen" title="default" href="${ctxPath}/css/login.css" />
@@ -57,10 +57,10 @@
 			<div class="header">
 				<div align="center">
 					<a class="logo" href="${ctxPath}/index.html"> <img
-						src="${ctxPath}/images/DIMO.png" width="230" height="85">
+						src="${ctxPath}/images/BBMPAY.png" width="230" height="85">
 					</a>
-					<div style="font-family:'Arial'; font-size: 11pt; color: #303030; font-weight: bold">
-							Selamat datang di layanan pelanggan DIMO</div>
+					<div style="font-family:'Arial'; font-size: 10pt; color: #303030; font-weight: bold">
+							Selamat datang di layanan pelanggan BBMPAY</div>
 				</div>
 				<%-- <span><font color="red">${error}</font></span> --%>
 			</div>

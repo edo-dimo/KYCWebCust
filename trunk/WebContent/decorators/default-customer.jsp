@@ -8,7 +8,7 @@
 <%@ taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <c:set var="ctxPath" value="${pageContext.request.contextPath}" />
-<title>Layanan Pelanggan DIMO</title>
+<title>Layanan Pelanggan BBMPAY</title>
 <head>
 	<link rel="stylesheet" href="${ctxPath}/css/jquery.realperson.css">
 	<style type="text/css">
@@ -21,7 +21,7 @@
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="${ctxPath}/css/table_list.css"/>
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="${ctxPath}/css/layout.css"/>
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="${ctxPath}/css/south-street.css"/> 
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="${ctxPath}/js/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="${ctxPath}/js/jquery.realperson.js"></script>
 	
 	<script type="text/javascript">
@@ -64,11 +64,11 @@
 
 	<div id="header">
 		<img src="${ctxPath}/images/banner.png" width="990" height="95" >
-        <div align="right">
+       <%--  <div align="right">
 			<a class="logo" href="${ctxPath}/index.html"> <img
-				src="${ctxPath}/images/DIMO.png" width="200" height="70" align="top">
+				src="${ctxPath}/images/BBMPAY.png" width="200" height="70" align="top">
 			</a>
-		</div>
+		</div> --%>
 		<%-- <ul id="top-navigation">        	        	
         	<sec:authorize access="hasAnyRole('ROLE_CUSTOMER')">
         		<li class="active"><span><span><a href="${ctxPath}/custstatus.do">Main Page</a></span></span></li>
