@@ -8,7 +8,7 @@
 <%@ taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <c:set var="ctxPath" value="${pageContext.request.contextPath}" />
-<title>Layanan Pelanggan BBMPAY</title>
+<title>Layanan Pelanggan Uangku</title>
 <head>
 	<link rel="stylesheet" href="${ctxPath}/css/jquery.realperson.css">
 	<style type="text/css">
@@ -21,7 +21,7 @@
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="${ctxPath}/css/table_list.css"/>
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="${ctxPath}/css/layout.css"/>
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="${ctxPath}/css/south-street.css"/> 
-	<script type="text/javascript" src="${ctxPath}/js/jquery/jquery.min.js"></script>
+	<script  type="text/javascript" src="${ctxPath}/js/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="${ctxPath}/js/jquery.realperson.js"></script>
 	
 	<script type="text/javascript">
@@ -62,11 +62,15 @@
 
 <div id="main">
 
+ 	 <div style="padding-top:3px;padding-left:13px">
+	 	<img alt="" src="${ctxPath}/images/layanan_ pelanggan_ uangku_web_ banner.png" width="967" height="90">
+	 </div>
+	
 	<div id="header">
-		<img src="${ctxPath}/images/banner.png" width="990" height="95" >
-       <%--  <div align="right">
+	<%-- 	<img src="${ctxPath}/images/banner.png" width="990" height="95" >
+        <div align="right">
 			<a class="logo" href="${ctxPath}/index.html"> <img
-				src="${ctxPath}/images/BBMPAY.png" width="200" height="70" align="top">
+				src="${ctxPath}/images/DIMO.png" width="200" height="70" align="top">
 			</a>
 		</div> --%>
 		<%-- <ul id="top-navigation">        	        	
@@ -112,7 +116,7 @@
      
     <div id="footer">
        	<br>
-       	<div style="text-align:center;">Copyright &copy; 2013 PT Digital Money Indonesia&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved</div>
+       	<div style="text-align:center;">Copyright &copy; 2013 Smartfren Telecom&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved</div>
     </div>
 </div>
 

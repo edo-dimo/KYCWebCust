@@ -22,6 +22,8 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --> 
  
  	<context:property-placeholder location="WEB-INF/config/application.properties"/> 
+ 	
+ 	<mvc:view-controller path="/video/view.do" view-name="videoplay"/>
  
     <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="order"                   value="1"/>

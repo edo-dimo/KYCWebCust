@@ -67,8 +67,7 @@ public class LoginLogoutController {
 		if (rpHash(request.getParameter("defaultReal")).equals(request.getParameter("defaultRealHash"))) { 
 			//if enter here means valid
 			//here we generate OTP			
-			//String sOTP = com.mobipay.customerkycweb.util.Utils.generateOTP();
-			String sOTP = "12345";
+			String sOTP = com.mobipay.customerkycweb.util.Utils.generateOTP();
 			String sMDN = request.getParameter("mdn");
 			if(sMDN.startsWith("0")) sMDN =  sMDN.substring(1, sMDN.length());
 			String sCountryCode = request.getParameter("countrycode");

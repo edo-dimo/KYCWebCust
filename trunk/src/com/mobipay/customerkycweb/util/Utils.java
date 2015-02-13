@@ -16,11 +16,10 @@ import java.net.URL;
 import java.util.Date;
 import java.util.Random;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 
-public abstract class Utils {		
+public abstract class Utils {
 	
 	public static String generateOTP(){    		
         int len = Constant.OTP_LENGTH;
@@ -51,10 +50,8 @@ public abstract class Utils {
 	public static String sendOTP(String mdn, String sOTP, String otp_link) {   
 		HttpURLConnection con = null;
 		try{
-			String sURL = otp_link;			
+			String sURL = otp_link;
 			sURL = sURL + "shortcode=" + Constant.OTP_SC + "&to=" + mdn + "&message=your%20SMS%20Token%20is%20" + sOTP;
-			
-			System.out.println("URL: " + sURL);
 			
 			URL url = new URL(sURL);
 			System.out.println(">>>> " + url + " <<< ");

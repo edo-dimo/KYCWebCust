@@ -6,13 +6,9 @@ import java.util.*;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.factory.annotation.Value;
 
 public class EncryptSHA {
 	private transient  final Log log = LogFactory.getLog(this.getClass());
-	
-
-	
 	public String Encrypt(String input) {
 		log.info(" Encrypting Password ");
 		String hash;

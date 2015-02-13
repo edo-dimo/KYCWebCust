@@ -16,7 +16,7 @@
 		#errmsg {color: red};
 	</style>		
 	
-	<script type="text/javascript" src="${ctxPath}/js/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script type="text/javascript" src="${ctxPath}/js/jquery.realperson.js"></script>
 	
 	<script type="text/javascript">

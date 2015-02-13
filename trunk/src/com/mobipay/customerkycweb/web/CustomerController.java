@@ -31,6 +31,9 @@ public class CustomerController {
 	@Value("${img.id.path}")
 	private String pathIDImage;
 	
+	@Value("${upload.img.id.path}")
+	private String uploadIDPath;
+	
 	@Value("${img.form.path}")
 	private String pathFormImage;
 	
@@ -65,7 +68,7 @@ public class CustomerController {
 		
 		if (file.getOriginalFilename() != null && !("").equals(file.getOriginalFilename())) {
 			InputStream inputStream = file.getInputStream();
-			String sFilePath = Constant.UPLOAD_DIR + "/"
+			String sFilePath = uploadIDPath + "/"
 					+ Utils.getUsername() + "_CUSTOMERID"
 					+ file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf('.'), file.getOriginalFilename().length());
 			
@@ -132,19 +135,12 @@ public class CustomerController {
 		
 		if (file.getOriginalFilename() != null && !("").equals(file.getOriginalFilename())) {
 			InputStream inputStream = file.getInputStream();
-			String sFilePath = Constant.UPLOAD_DIR + "/"
+			String sFilePath = uploadIDPath + "/"
 					+ Utils.getUsername() + "_CUSTOMERID"
 					+ file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf('.'), file.getOriginalFilename().length());
 			
 			String sFileName = Utils.getUsername() + "_CUSTOMERID" + file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf('.'), file.getOriginalFilename().length());
 			
-			//customer update the Photo
-			Customer cust = new Customer();
-			cust.setMobileNumber(Utils.getUsername());
-			cust.setCustomerIDPhoto(sFileName);
-			cust.setStatus("8");
-			custService.customerUpdateUploadPhoto(cust);
-						
 			//save the pic to server
 			OutputStream outputStream = new FileOutputStream(sFilePath);
 
@@ -157,6 +153,12 @@ public class CustomerController {
 			outputStream.close();
 			inputStream.close();
 						
+			//customer update the Photo
+			Customer cust = new Customer();
+			cust.setMobileNumber(Utils.getUsername());
+			cust.setCustomerIDPhoto(sFileName);
+			cust.setStatus("8");
+			custService.customerUpdateUploadPhoto(cust);
 		}
 				
 		return "redirect:viewid.do";	
