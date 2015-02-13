@@ -23,7 +23,6 @@ public class CustomUserDetailsService implements UserDetailsService {
 	@Autowired
 	UserService appUserService;
 	private transient  final Log log = LogFactory.getLog(this.getClass());
-	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException, DataAccessException {
 		
 		List<com.mobipay.customerkycweb.model.User> user = appUserService.searchByMDN(username);
